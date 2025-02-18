@@ -1,23 +1,29 @@
 import { useState } from "react";
 import Logo from "../../assets/Logo.png";
 
-const Login = () => {
+const Register = () => {
     const [email, setEmail] = useState<string>("");  
     const [password, setPassword] = useState<string>("");
+    const [confirmPassword, setConfirmPassword] = useState<string>("")
     const [error, setError] = useState<string>("");
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        if(!email || !password){
-            setError("Insert email and password");
+        if(!email || !password || !confirmPassword){
+            setError("All fields are required");
+            return;
+        }
+
+        if(password !== confirmPassword){
+            setError("Password doesn't match.");
             return;
         }
 
         setError("");
-        console.log("Login con: ", { email, password });
+        console.log("User registered:", { email, password });
 
-        //insert logic auth here
+        //insert logic send
     };
 
     return (
@@ -55,6 +61,16 @@ const Login = () => {
                             onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
+                    <div className="w-full">
+                        <label className="block text-primary-100 font-semibold text-sm">Confirm passord</label>
+                        <input 
+                            type="password" 
+                            className="w-full h-10 border border-secondary-300 rounded text-sm pl-2"
+                            placeholder="Confirm your password"
+                            value={confirmPassword}
+                            onChange={(e) => setConfirmPassword(e.target.value)}
+                        />
+                    </div>
                     <button 
                         type="submit"
                         className="w-full bg-primary-100 text-white py-2 rounded hover:bg-primary-200 transition"
@@ -64,12 +80,12 @@ const Login = () => {
                 </form>
 
                 <p className="text-center text-sm text-primary-100 mt-4">
-                    Don't you have an account? 
-                    <a href="/register" className="text-blue-500 hover:underline"> Register here</a>
+                    Already have an account? 
+                    <a href="/login" className="text-blue-500 hover:underline"> Login here</a>
                 </p>
             </div>
         </section>
     );
 };
 
-export default Login;
+export default Register;
