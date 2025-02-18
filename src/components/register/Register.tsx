@@ -62,7 +62,7 @@ const Register = () => {
                         />
                     </div>
                     <div className="w-full">
-                        <label className="block text-primary-100 font-semibold text-sm">Confirm passord</label>
+                        <label className="block text-primary-100 font-semibold text-sm">Confirm password</label>
                         <input 
                             type="password" 
                             className="w-full h-10 border border-secondary-300 rounded text-sm pl-2"
