@@ -5,14 +5,12 @@ const useProfileState = () => {
     const [age, setAge] = useState<number | "">();
     const [height, setHeight] = useState<number | "">();
     const [weight, setWeight] = useState<number | "">();
-    const [trainingType, setTrainingType] = useState<string>("");
 
     return {
         name, setName,
         age, setAge,
         height, setHeight,
         weight, setWeight,
-        trainingType, setTrainingType
     };
 };
 

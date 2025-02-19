@@ -7,16 +7,15 @@ const UserProfile = () => {
         age, setAge,
         height, setHeight,
         weight, setWeight,
-        trainingType, setTrainingType
     } = useProfileState();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        if (!name || !age || !height || !weight || !trainingType) {
+        if (!name || !age || !height || !weight) {
             alert("Please fill in all fields!");
             return;
         }
-        console.log("User Data Saved:", { name, age, height, weight, trainingType });
+        console.log("User Data Saved:", { name, age, height, weight });
         // Database logic here
     };
 
@@ -26,7 +25,7 @@ const UserProfile = () => {
                 <img src={Logo} className="w-24 xs:w-20 object-contain mb-4" alt="Logo" />
                 <h2 className="text-2xl xs:text-xl font-bold mb-2">Welcome!</h2>
                 <p className="text-secondary-300 mb-6 text-center text-sm xs:text-xs">
-                    Track your progress and achieve your fitness goals.
+                    Track your progress and achieve your goals.
                 </p>
 
                 <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
@@ -70,21 +69,6 @@ const UserProfile = () => {
                             onChange={(e) => setWeight(e.target.value ? Number(e.target.value) : "")}
                         />
                     </div>
-                    <div>
-                        <label className="block text-sm font-semibold">Training Type</label>
-                        <select
-                            className="w-full p-2 mt-1 rounded-lg bg-primary-100 border border-secondary-300 focus:ring-2 focus:ring-secondary-300 outline-none text-sm"
-                            value={trainingType}
-                            onChange={(e) => setTrainingType(e.target.value)}
-                        >
-                            <option value="" disabled>Select training type</option>
-                            <option value="Weight Loss">Weight Loss</option>
-                            <option value="Muscle Gain">Muscle Gain</option>
-                            <option value="Toning">Toning</option>
-                            <option value="Strength">Strength</option>
-                        </select>
-                    </div>
-
                     <button
                         type="submit"
                         className="w-full py-2 mt-4 bg-secondary-300 text-primary-100 hover:bg-yellow-500 rounded-lg font-semibold transition-all text-sm"

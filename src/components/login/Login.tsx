@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
 import useFormState from "../../hook/useFormState";
 
 const Login = () => {
     const { email, setEmail, password, setPassword, error, setError } = useFormState();
+    const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -12,10 +14,14 @@ const Login = () => {
             return;
         }
 
-        setError("");
-        console.log("Login con: ", { email, password });
-
-        //insert logic auth here
+        //fake auth
+        if (email === "admin@example.com" && password === "123") {
+            setError("");
+            console.log("Login success:", { email });
+            navigate("/user-profile");
+        } else {
+            setError("Invalid email or password");
+        }
     };
 
     return (
