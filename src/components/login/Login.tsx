@@ -1,10 +1,8 @@
-import { useState } from "react";
 import Logo from "../../assets/Logo.png";
-
+import useFormState from "../../hook/useFormState";
 const Login = () => {
-    const [email, setEmail] = useState<string>("");  
-    const [password, setPassword] = useState<string>("");
-    const [error, setError] = useState<string>("");
+
+    const { email, setEmail, password, setPassword, error, setError } = useFormState();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -32,7 +30,7 @@ const Login = () => {
                     Track your gains and progress easily
                 </p>
 
-                {error && <p className="text-red-500 text-sm text-center mt-2">{error}</p>}
+                {error && <p className="text-red-500 text-sm text-center mt-2 min-h-[20px]">{error}</p>}
 
                 <form onSubmit={handleSubmit} className="w-full flex flex-col items-center  gap-4 p-4 rounded-md">
                     <div className="w-full">
@@ -65,7 +63,7 @@ const Login = () => {
 
                 <p className="text-center text-sm text-primary-100 mt-4">
                     Don't you have an account? 
-                    <a href="/register" className="text-blue-500 hover:underline"> Register here</a>
+                    <a href="/register" className="text-blue-500 hover:underline"> Sign in here</a>
                 </p>
             </div>
         </section>
