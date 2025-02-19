@@ -1,86 +1,86 @@
-
 import Logo from "../../assets/Logo.png";
 import useFormState from "../../hook/useFormState";
 
 const Register = () => {
-
     const { email, setEmail, password, setPassword, error, setError, confirmPassword, setConfirmPassword } = useFormState();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        if(!email || !password || !confirmPassword){
+        if (!email || !password || !confirmPassword) {
             setError("All fields are required");
             return;
         }
 
-        if(password !== confirmPassword){
-            setError("Password doesn't match.");
+        if (password !== confirmPassword) {
+            setError("Passwords do not match.");
             return;
         }
 
         setError("");
         console.log("User registered:", { email, password });
 
-        //insert logic send
+        // Logic to send data
     };
 
     return (
-        <section className="w-full mx-auto h-screen flex justify-center items-center">
-            <div className="max-w-md flex flex-col justify-center items-center p-6 rounded-lg bg-white shadow-black shadow-2xl">
-                <img 
-                    src={Logo}
-                    className="w-32 object-contain mb-4"
-                    alt="Logo image" 
-                />
-                <p className="text-sm text-gray-600 text-center">
+        <section className="w-full min-h-screen flex justify-center items-center bg-primary-100 px-4">
+            <div className="max-w-md w-full xs:max-w-xs bg-primary-200 p-6 xs:p-4 rounded-2xl shadow-lg flex flex-col items-center text-white">
+                <img src={Logo} className="w-32 xs:w-20 object-contain mb-4" alt="Logo" />
+                <p className="text-sm xs:text-xs text-secondary-300 text-center">
                     Track your gains and progress easily
                 </p>
 
-                {error && <p className="text-red-500 text-sm text-center mt-2 min-h-[20px]">{error}</p>}
+                {error && (
+                    <p className="text-red-500 text-sm text-center mt-2 min-h-[20px] animate-pulse">
+                        {error}
+                    </p>
+                )}
 
-                <form onSubmit={handleSubmit} className="w-full flex flex-col items-center  gap-4 p-4 rounded-md">
-                    <div className="w-full">
-                        <label className="block text-primary-100 font-semibold text-sm">Email</label>
-                        <input 
-                            type="email" 
-                            className="w-full h-10 border border-secondary-300 rounded text-sm pl-2"
+                <form onSubmit={handleSubmit} className="w-full flex flex-col gap-4">
+                    <div>
+                        <label className="block text-sm font-semibold">Email</label>
+                        <input
+                            type="email"
+                            className="w-full p-2 mt-1 rounded-lg bg-primary-100 border border-secondary-300 focus:ring-2 focus:ring-secondary-300 outline-none"
                             placeholder="Insert your email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
-                    <div className="w-full">
-                        <label className="block text-primary-100 font-semibold text-sm">Password</label>
-                        <input 
-                            type="password" 
-                            className="w-full h-10 border border-secondary-300 rounded text-sm pl-2"
+                    <div>
+                        <label className="block text-sm font-semibold">Password</label>
+                        <input
+                            type="password"
+                            className="w-full p-2 mt-1 rounded-lg bg-primary-100 border border-secondary-300 focus:ring-2 focus:ring-secondary-300 outline-none"
                             placeholder="Insert your password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                         />
                     </div>
-                    <div className="w-full">
-                        <label className="block text-primary-100 font-semibold text-sm">Confirm password</label>
-                        <input 
-                            type="password" 
-                            className="w-full h-10 border border-secondary-300 rounded text-sm pl-2"
+                    <div>
+                        <label className="block text-sm font-semibold">Confirm Password</label>
+                        <input
+                            type="password"
+                            className="w-full p-2 mt-1 rounded-lg bg-primary-100 border border-secondary-300 focus:ring-2 focus:ring-secondary-300 outline-none"
                             placeholder="Confirm your password"
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
                         />
                     </div>
-                    <button 
+                    <button
                         type="submit"
-                        className="w-full bg-primary-100 text-white py-2 rounded hover:bg-primary-200 transition"
+                        className="w-full py-2 mt-4 bg-secondary-300 text-primary-100 hover:bg-yellow-500 rounded-lg font-semibold transition-all"
                     >
-                        Submit
+                        Register
                     </button>
                 </form>
 
-                <p className="text-center text-sm text-primary-100 mt-4">
-                    Do you have an account?
-                    <a href="/login" className="text-blue-500 hover:underline"> Sign up here</a>
+                <p className="text-center text-sm mt-4">
+                    Already have an account?{" "}
+                    <a href="/login" className="text-accent-100 hover:underline">
+                        Log in here
+                    </a>
                 </p>
             </div>
         </section>

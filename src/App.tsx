@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Navigate } from "react-router-dom"
 import Login from "./components/login/Login"
 import Register from "./components/register/Register"
-import UserProfile from "./pages/userProfile"
+import UserProfile from "./pages/UserProfile"
 
 const App = () => {
   return (

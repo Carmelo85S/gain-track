@@ -6,7 +6,10 @@ export default {
       colors:{
         "primary-100": "#161616",
         "primary-200": "#282827",
-        "secondary-300": "#ffdb4c"
+        "primary-300": "#3a3a3a",
+        "secondary-300": "#ffdb4c",
+        "secondary-400": "#ffcc00",
+        "accent-100": "#f59e0b",
       },
     },
     screens:{
