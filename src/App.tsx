@@ -3,24 +3,24 @@ import { Navigate } from "react-router-dom";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import UserProfile from "./pages/UserProfile";
+import { ProfileProvider } from "./hook/profileContext";
 import HomePage from "./pages/HomePage";
 
 const App = () => {
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Navigate to="/login" />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/user-profile" element={
-          <UserProfile />} 
-        />
-        <Route path="/home-page" element={
-          <HomePage />} 
-        />
-      </Routes>
-    </BrowserRouter>
+    <ProfileProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Navigate to="/login" />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/user-profile" element={<UserProfile />} />
+          <Route path="/home-page" element={<HomePage />} 
+          />
+        </Routes>
+      </BrowserRouter>
+    </ProfileProvider>
   );
 };
 
