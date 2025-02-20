@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
 import useFormState from "../../hook/useFormState";
 
 const Register = () => {
     const { email, setEmail, password, setPassword, error, setError, confirmPassword, setConfirmPassword } = useFormState();
+    const navigate = useNavigate();
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
@@ -19,7 +21,7 @@ const Register = () => {
 
         setError("");
         console.log("User registered:", { email, password });
-
+        navigate('/user-profile');
         // Logic to send data
     };
 
