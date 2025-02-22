@@ -1,18 +1,15 @@
 import { useProfile } from "../../hook/profileContext";
-import Logo from "../../assets/Logo.png"
 
 const Dashboard = () => {
-  const { name, age, height, weight } = useProfile();
+  const { name } = useProfile();
 
   return (
-    <section className="w-full flex justify-center items-center bg-primary-100 mt-4 px-4">
-      <div className="w-full min-h-10 max-w-3xl bg-primary-200 p-8 xs:p-4 rounded-2xl shadow-lg flex flex-col items-center md:flex-row md:items-start text-white">
-      <img src={Logo} className="w-32 xs:w-20 object-contain" alt="Logo" />
-        <div className="md:px-9">
-          <p><strong>Name:</strong> {name}</p>
-          <p><strong>Age:</strong> {age}</p>
-          <p><strong>Weight:</strong> {weight} kg</p>
-          <p><strong>Height:</strong> {height} cm</p>
+    <section className="w-full flex justify-center items-center py-6">
+      <div className="w-full max-w-7xl p-8 xs:p-6 rounded-2xl flex items-start md:flex-row md:items-start gap-6 md:gap-12">
+        <div className="text-center md:text-left">
+          <p className="text-xl font-semibold text-white mb-2">
+            <strong>Hello :</strong> {name}
+          </p>
         </div>
       </div>
     </section>

@@ -3,17 +3,20 @@ export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"], 
   theme: {
     extend: {
+      backgroundImage: {
+        'gradient': 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 76%)'
+      },
       colors: {
-        "primary-100": "#112d44",   // Blu scuro intenso per lo sfondo principale
-        "primary-200": "#2a4f6b",   // Blu medio scuro per contrasto elegante
-        "primary-300": "#54778d",   // Blu chiaro/grigio-blu per un tocco soft e fresco
-        "secondary-300": "#3a6f98", // Blu vivace per pulsanti o sezioni interattive
-        "secondary-400": "#1f4f6f", // Blu intenso per accenti e dettagli di impatto
-        "accent-100": "#2a8f8f",    // Verde acqua scuro per aggiungere freschezza senza distrarre
-    }
-    
+        "primary-100": "#1C3D63",  // Blu intenso, elegante ma energico
+        "primary-200": "#3B5A83",  // Un blu un po' più chiaro, per un tocco di freschezza
+        "secondary-300": "#F34F3A", // Rosso-arancio brillante per spinta ed energia
+        "secondary-400": "#F5A623", // Arancio dorato, per un contrasto caldo ed invitante
+        "training-100":"#055FAC",
+        "training-text": "#C6C6C6",
+        "accent-100": "#A4D65E",    // Verde chiaro, fresco e vitale, per dare equilibrio e freschezza
+      }
     },
-    screens:{
+    screens: {
       xs: "480px",
       sm: "768px",
       md: "1060px",
