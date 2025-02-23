@@ -1,4 +1,4 @@
-import TrainingButton from "../button/TrainingButton";
+import TrainingButton from "../button/TrainingListButton";
 
 const trainingTypes = [
   { label: "Strength", link: "/strength" },

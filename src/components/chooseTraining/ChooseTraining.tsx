@@ -1,12 +1,12 @@
-import ChooseTrainingGraphics from "../../assets/choose-training.webp"
+import { TrainingGraphics } from "../../types/TrainingGraphics"
 
-const ChooseTraining = () => {
+const ChooseTraining: React.FC<TrainingGraphics> = ({img, alt}) => {
   return (
     <div>
       <img 
         className="rounded-md"
-        src={ChooseTrainingGraphics} 
-        alt="chose training graphics" 
+        src={img} 
+        alt={alt}
     />
     </div>
   )

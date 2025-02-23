@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { MenuButtonProps } from "../../types/MenuButtonProps";
 
-const TrainingButton: React.FC<MenuButtonProps> = ({ label, link }) => {
+const TrainingListButton: React.FC<MenuButtonProps> = ({ label, link }) => {
   const navigate = useNavigate();
 
   return (
@@ -17,4 +17,4 @@ const TrainingButton: React.FC<MenuButtonProps> = ({ label, link }) => {
   );
 };
 
-export default TrainingButton;
+export default TrainingListButton;
