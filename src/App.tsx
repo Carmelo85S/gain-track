@@ -9,7 +9,7 @@ const App = () => {
 
   return (
     <ProfileProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/gain-track">
         <Routes>
           <Route path="/" element={<Navigate to="/user-profile" />} />
           <Route path="/user-profile" element={<UserProfile />} />
