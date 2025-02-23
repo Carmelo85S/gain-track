@@ -47,13 +47,13 @@ const Watch = () => {
     };
 
     return (
-        <div className="w-5/6 flex justify-between items-center flex-col m-10">
+        <div className="w-5/6 flex justify-between items-center flex-col my-10">
             <div className="w-5/6">
                 <p className="text-4xl mb-3 text-center text-white">{
                 formatTime(elapsedTime)}
                 </p>
             </div>
-            <div className="w-4/6 mx-2 flex justify-between ">
+            <div className="mx-2 flex items-center justify-between ">
             <button 
                 className="px-6 py-2 bg-primary-100 text-white font-semibold rounded-lg hover:bg-primary-200 transition-all duration-300"
                 onClick={start}
