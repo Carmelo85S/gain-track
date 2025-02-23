@@ -11,7 +11,7 @@ const App = () => {
     <ProfileProvider>
       <BrowserRouter basename="/gain-track">
         <Routes>
-          <Route path="/" element={<Navigate to="/homepage" />} />
+          <Route path="/" element={<Navigate to="/home-page" />} />
           {/*<Route path="/user-profile" element={<UserProfile />} />*/}
           <Route path="/home-page" element={<HomePage />} />
           <Route path="/strength" element={<Strength />} />
