@@ -1,14 +1,13 @@
 import { useState } from "react";
-import { Training } from "../../types/MenuButtonProps";
+import { TrainingTypes } from "../../types/MenuButtonProps";
 
-const ChoosenTrainingButton: React.FC<Training> = ({ label }) => {
+const ChoosenTrainingButton: React.FC<TrainingTypes> = ({ label }) => {
 
   const [progress, setProgress] = useState<number>(0);
 
   const handleProgress = (e: React.ChangeEvent<HTMLInputElement>) => {
     setProgress(Number(e.target.value));
   };
-
 
   return (
     <div className="w-full h-auto my-2 bg-training-100 text-training-text font-semibold text-lg flex justify-start items-center rounded-xs">

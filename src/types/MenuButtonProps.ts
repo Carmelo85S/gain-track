@@ -3,6 +3,6 @@ export interface MenuButtonProps {
     link: string;
 }
 
-export interface Training {
+export interface TrainingTypes {
     label: string;
 }
