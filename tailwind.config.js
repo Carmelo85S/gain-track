@@ -3,21 +3,25 @@ export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"], 
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
       backgroundImage: {
-        'gradient': 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 76%)'
+        'main-bg': "url('/src/assets/main.webp')", 
       },
       colors: {
-        "primary-100": "#1C3D63",  // Blu intenso, elegante ma energico
-        "primary-200": "#3B5A83",  // Un blu un po' più chiaro, per un tocco di freschezza
-        "secondary-300": "#F34F3A", // Rosso-arancio brillante per spinta ed energia
-        "secondary-400": "#F5A623", // Arancio dorato, per un contrasto caldo ed invitante
-        "training-100":"#055FAC",
-        "training-text": "#C6C6C6",
-        "accent-100": "#A4D65E",    // Verde chiaro, fresco e vitale, per dare equilibrio e freschezza
+        "main": "#C6C6C6",
+        "primary-100": "#FF6B00",   // Arancione acceso per elementi principali (bottoni, call-to-action)
+        "primary-200": "#FFA559",   // Arancione più tenue per hover ed effetti soft
+        "secondary-300": "#005F73", // Blu petrolio per un contrasto moderno ed elegante
+        "secondary-400": "#0A9396", // Blu acqua per elementi secondari con freschezza
+        "training-100": "#001219",  // Blu notte molto scuro per profondità e forza
+        "training-text": "#EAEAEA", // Bianco sporco per leggibilità su sfondi scuri
+        "accent-100": "#94D2BD",    // Verde menta leggero per piccoli dettagli e armonia
       }
     },
     screens: {
-      xs: "480px",
+      xs: "320px",
       sm: "768px",
       md: "1060px",
     }
