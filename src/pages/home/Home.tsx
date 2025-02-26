@@ -6,7 +6,7 @@ const Home = () => {
     const navigate = useNavigate();
 
   return (
-    <div className="md:hidden xs:bg-main-bg xs:bg-no-repeat xs:bg-center xs:bg-cover sm:bg-main-bg sm:bg-no-repeat sm:bg-center sm:bg-cover flex flex-col justify-center w-full min-h-screen overflow-hidden">
+    <div className="md:hidden xs:bg-main-bg xs:bg-no-repeat xs:bg-center xs:bg-cover sm:bg-main-bg sm:bg-no-repeat sm:bg-center sm:bg-cover flex flex-col justify-center w-full h-screen overflow-hidden">
         <div className="w-full bg-black bg-opacity-65 shadow-md rounded-lg mx-auto flex justify-center items-center flex-col font-inter">
             <h1 className="text-main my-auto font-semibold text-3xl tracking-wide">
                 NO MORE EXCUSE
