@@ -7,11 +7,12 @@ const Home = () => {
     const navigate = useNavigate();
 
   return (
-    <div className="md:hidden xs:bg-main-bg xs:bg-no-repeat xs:bg-center xs:bg-cover xs:w-full xs:h-screen xs:flex xs:flex-col xs:justify-center xs:items-center xs:overflow-hidden">
+    <div className="md:hidden xs:bg-main-bg xs:bg-no-repeat xs:bg-center xs:bg-cover xs:w-full xs:h-screen xs:flex xs:flex-col xs:justify-center xs:items-center xs:touch-none">
         <div className="w-full bg-black bg-opacity-65 shadow-md rounded-lg flex flex-col items-center text-center">
             <Heading labelH1="NO EXCUSE" labelH2="DO IT NOW" />
             <p className="w-5/6 text-main text-justify">
-                Achieve your fitness goals and track your progress effortlessly. Stay consistent, push your limits, and see real results with every workout.
+                Achieve your fitness goals and track your progress effortlessly. 
+                Stay consistent, push your limits, and see real results with every workout.
             </p>
             <div className="w-3/5 my-2 flex justify-between items-center">
                 <Button 
