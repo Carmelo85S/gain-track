@@ -57,7 +57,7 @@ const ProfileForm = () => {
                 </div>
 
                 {/* Age & Weight */}
-                <div className="w-full flex sm:flex-row justify-between items-center gap-x-4 border p-2">
+                <div className="w-full flex sm:flex-row justify-between items-center gap-x-4">
                     {/* Age */}
                     <div className="flex items-center gap-x-2">
                         <label htmlFor="age" className="text-main font-semibold">Age</label>
