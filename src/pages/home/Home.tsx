@@ -17,7 +17,7 @@ const Home = () => {
             <p className="w-5/6 text-main text-justify">
                 Achieve your fitness goals and track your progress effortlessly. Stay consistent, push your limits, and see real results with every workout.
             </p>
-            <div className="w-4/5 mt-2 flex justify-between items-center">
+            <div className="w-4/5 my-2 flex justify-between items-center">
                 <Button 
                     label="Sign In" 
                     onClick={() => navigate("/signin")}
