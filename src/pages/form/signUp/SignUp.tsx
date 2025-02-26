@@ -24,7 +24,7 @@ const Login = () => {
 
 
   return (
-    <div className="md:hidden xs:bg-profile-bg xs:bg-no-repeat xs:bg-center xs:bg-contain flex flex-col justify-center min-h-screen">
+    <div className="md:hidden xs:bg-form-bg xs:bg-no-repeat xs:bg-center xs:bg-contain flex flex-col justify-center min-h-screen">
       <form 
         className="w-5/6 bg-black bg-opacity-65 shadow-md rounded-lg p-6 mx-auto flex flex-col"
         onSubmit={handleSubmit}
