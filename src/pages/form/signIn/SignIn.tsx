@@ -22,9 +22,9 @@ const Login = () => {
 
 
   return (
-    <div className="md:hidden xs:bg-form-bg xs:bg-no-repeat xs:bg-center xs:bg-contain flex flex-col justify-center h-screen overflow-hidden">
+    <div className="md:hidden xs:bg-form-bg xs:bg-no-repeat xs:bg-center xs:bg-contain xs:flex xs:flex-col xs:justify-center xs:items-center xs:h-screen xs:touch-none">
       <form 
-        className="w-5/6 bg-black bg-opacity-65 shadow-md rounded-lg mx-auto flex flex-col"
+        className="w-5/6 px-2 py-2 bg-black bg-opacity-65 shadow-md rounded-md mx-auto flex flex-col"
         onSubmit={handleSubmit}
       >
         <label htmlFor="email" className="mb-2 text-main font-semibold">
@@ -38,7 +38,7 @@ const Login = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="p-2 border border-gray-300 rounded-md w-full mb-4 focus:ring focus:ring-blue-200"
+          className="p-2 border border-gray-300 rounded-md w-full mb-4 focus:ring focus:ring-blue-200 font-sans"
         />
 
         <label htmlFor="password" className="mb-2 text-main font-semibold">
@@ -52,15 +52,15 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          className="p-2 border border-gray-300 rounded-md w-full mb-4 focus:ring focus:ring-blue-200"
+          className="p-2 border border-gray-300 rounded-md w-full mb-4 focus:ring focus:ring-blue-200 font-sans"
         />
 
         <div className="w-full flex justify-center">
           <Button label="Sign In" type="submit" />
         </div>
         <div className="flex justify-center items-center pt-4">
-          <p className="text-main text-xs pr-2">Don't you have an account?</p>
-          <a className="text-main text-xs" onClick={() => navigate("/signup")}>Register here</a>
+          <p className="text-main text-xs pr-2 font-sans">Don't you have an account?</p>
+          <a className="text-main text-xs font-sans" onClick={() => navigate("/signup")}>Register here</a>
         </div>
       </form>
     </div>
