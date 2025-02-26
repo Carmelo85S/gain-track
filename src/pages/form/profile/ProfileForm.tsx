@@ -20,7 +20,7 @@ const ProfileForm = () => {
     };
 
     return (
-        <div className="md:hidden xs:bg-profile-bg xs:bg-no-repeat xs:bg-center xs:bg-cover flex flex-col justify-center h-screen">
+            <div className="md:hidden xs:bg-profile-bg xs:bg-no-repeat xs:bg-center xs:bg-contain flex flex-col justify-center min-h-screen">
             <div>
                 <h1 className="text-center text-white text-6xl font-bold mx-auto w-5/6 tracking-widest">CREATE</h1>
                 <h2 className='text-center mb-4 font-bold mx-auto w-5/6 h-10 bg-primary-100 rounded-lg text-black my-5 text-3xl tracking-wide'>
