@@ -9,6 +9,9 @@ export default {
       backgroundImage: {
         'main-bg': "url('/src/assets/main.webp')",
         'form-bg': "url('/src/assets/form.webp')", 
+        'profile-bg': "url('/src/assets/profile-form.webp')",
+        'man-workout' : "url('/src/assets/man-workout-main.webp')",
+        'woman-workout' : "url('/src/assets/woman-workout-main.webp')",
       },
       colors: {
         "main": "#C6C6C6",

@@ -8,6 +8,8 @@ const Login = () => {
   const [password, setPassword] = useState<string>("");
   const [confirmPassword, setConfirmPassword] = useState<string>("");
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Name:", name);
@@ -15,10 +17,11 @@ const Login = () => {
     console.log("Password:", password);
     console.log("Confirm Password", confirmPassword);
 
+    navigate("/profile-form")
+
     // Logic auth
   };
 
-  const navigate = useNavigate();
 
   return (
     <div className="md:hidden xs:bg-form-bg xs:bg-no-repeat xs:bg-center xs:bg-cover flex flex-col justify-center h-screen">

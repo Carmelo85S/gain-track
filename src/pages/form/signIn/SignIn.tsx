@@ -6,15 +6,20 @@ const Login = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
 
+  const navigate = useNavigate();
+  
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Email:", email);
     console.log("Password:", password);
 
+    if(email === "info@gmail.com" && password === "1234"){
+      navigate("/profile-form");
+    }
+
     // Logic auth
   };
 
-  const navigate = useNavigate();
 
   return (
     <div className="md:hidden xs:bg-form-bg xs:bg-no-repeat xs:bg-center xs:bg-cover flex flex-col justify-center h-screen">
