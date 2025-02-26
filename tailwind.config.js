@@ -7,7 +7,8 @@ export default {
         sans: ["Inter", "sans-serif"],
       },
       backgroundImage: {
-        'main-bg': "url('/src/assets/main.webp')", 
+        'main-bg': "url('/src/assets/main.webp')",
+        'form-bg': "url('/src/assets/form.webp')", 
       },
       colors: {
         "main": "#C6C6C6",
