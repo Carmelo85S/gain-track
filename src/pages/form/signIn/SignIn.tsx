@@ -24,7 +24,7 @@ const Login = () => {
   return (
     <div className="md:hidden xs:bg-form-bg xs:bg-no-repeat xs:bg-center xs:bg-contain xs:flex xs:flex-col xs:justify-center xs:items-center xs:h-screen xs:touch-none">
       <form 
-        className="w-5/6 px-2 py-2 bg-black bg-opacity-65 shadow-md rounded-md mx-auto flex flex-col"
+        className="w-5/6 p-2 bg-black bg-opacity-65 shadow-md rounded-md mx-auto flex flex-col"
         onSubmit={handleSubmit}
       >
         <label htmlFor="email" className="mb-2 text-main font-semibold">
