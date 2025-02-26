@@ -11,7 +11,7 @@ const Home = () => {
             <h1 className="text-main my-auto font-semibold text-3xl tracking-wide">
                 NO MORE EXCUSE
             </h1>
-            <h2 className="ml-9 w-2/4 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-main text-center my-5 mr-auto font-semibold text-2xl tracking-wide">
+            <h2 className="ml-9 w-2/4 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-black text-center my-5 mr-auto font-semibold text-2xl tracking-wide">
                 DO IT NOW
             </h2>
             <p className="w-5/6 text-main text-justify">

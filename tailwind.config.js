@@ -12,7 +12,8 @@ export default {
       },
       colors: {
         "main": "#C6C6C6",
-        "primary-100": "#FF6B00",   // Arancione acceso per elementi principali (bottoni, call-to-action)
+        "black": "#000",
+        "primary-100": "#f1fF00",   // Arancione acceso per elementi principali (bottoni, call-to-action)
         "primary-200": "#FFA559",   // Arancione più tenue per hover ed effetti soft
         "secondary-300": "#005F73", // Blu petrolio per un contrasto moderno ed elegante
         "secondary-400": "#0A9396", // Blu acqua per elementi secondari con freschezza

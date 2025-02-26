@@ -83,7 +83,7 @@ const Login = () => {
         />  
 
         <div className="w-full flex justify-center">
-          <Button label="Sign In" type="submit" />
+          <Button label="Sign Up" type="submit" />
         </div>
         <div className="flex justify-center items-center pt-4">
           <p className="text-main text-xs pr-2">Already have an account?</p>
