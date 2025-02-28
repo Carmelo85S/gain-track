@@ -7,7 +7,7 @@ const Home = () => {
     const navigate = useNavigate();
 
   return (
-    <div className="md:hidden xs:max-w-full xs:w-full xs:min-h-screen xs:flex xs:flex-col xs:justify-center xs:items-center xs:overflow-hidden">
+    <div className="md:hidden xs:bg-main-bg xs:bg-no-repeat xs:bg-center xs:bg-cover xs:w-full xs:h-screen xs:flex xs:flex-col xs:justify-center xs:items-center xs:overflow-hidden">
         <div className="w-full bg-black bg-opacity-65 shadow-md rounded-lg flex flex-col items-center text-center">
             <Heading labelH1="NO EXCUSE" labelH2="DO IT NOW" />
             <p className="w-5/6 text-main text-justify">
