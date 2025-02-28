@@ -5,6 +5,7 @@ import Home from "./pages/home/Home"
 import ManWorkout from "./pages/man-workout/ManWorkout";
 import FemaleWorkout from "./pages/woman-workout/FemaleWorkout";
 import ProfileForm from "./pages/form/profile/ProfileForm";
+import './index.css';
 
 const App = () => {
   return (
