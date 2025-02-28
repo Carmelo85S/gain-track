@@ -19,7 +19,7 @@ const ProfileForm = () => {
     };
 
     return (
-        <div className="md:hidden xs:w-full xs:h-screen xs:flex xs:flex-col xs:justify-center xs:items-center xs:bg-profile-bg xs:bg-no-repeat xs:bg-center xs:bg-cover xs:touch-none">
+        <div className="no-overflow md:hidden xs:w-full xs:h-screen xs:flex xs:flex-col xs:justify-center xs:items-center xs:bg-profile-bg xs:bg-no-repeat xs:bg-center xs:bg-cover">
             {/* Heading */}
             <div className="w-full bg-black bg-opacity-65 shadow-md rounded-lg flex flex-col items-center text-center">
                 <Heading labelH1="CREATE" labelH2="YOUR PROFILE" />
