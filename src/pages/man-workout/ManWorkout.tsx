@@ -22,29 +22,30 @@ const ManWorkout = () => {
         </div>
       </div>
 
-      <div className="relative mt-[50vh] flex flex-col justify-center items-center z-0 gap-7 py-16">
-        <Experience
-          onClick={() => navigate("/")}
-          label={"Beginner"}
-          variant="outline"
-          size="large"
-          img={BeginnerMan}
-        />
-        <Experience
-          onClick={() => navigate("/")}
-          label={"Intermediate"}
-          variant="outline"
-          size="large"
-          img={IntermediateMan}
-        />
-        <Experience
-          onClick={() => navigate("/")}
-          label={"Advanced"}
-          variant="outline"
-          size="large"
-          img={AdvanceMan}
-        />
-      </div>
+      <div className="relative mt-[40vh] flex flex-col justify-center items-center z-0 gap-7 py-32">
+  <Experience
+    onClick={() => navigate("/")}
+    label={"Beginner"}
+    variant="outline"
+    size="large"
+    img={BeginnerMan}
+  />
+  <Experience
+    onClick={() => navigate("/")}
+    label={"Intermediate"}
+    variant="outline"
+    size="large"
+    img={IntermediateMan}
+  />
+  <Experience
+    onClick={() => navigate("/")}
+    label={"Advanced"}
+    variant="outline"
+    size="large"
+    img={AdvanceMan}
+  />
+</div>
+
     </div>
   );
 };
