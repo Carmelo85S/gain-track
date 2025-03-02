@@ -22,7 +22,7 @@ const ManWorkout = () => {
         </div>
       </div>
 
-      <div className="relative mt-[30vh] flex flex-col justify-center items-center z-0 gap-7 py-32 bg-slate-950">
+      <div className="relative mt-[50vh] flex flex-col justify-center items-center z-0 gap-7 py-32 bg-slate-950">
       <Experience
         onClick={() => navigate("/")}
         label={"Beginner"}
