@@ -10,12 +10,12 @@ const Experience: React.FC<ExperienceProps> = ({
   size = "medium",
   img = BeginnerMan || IntermediateMan || AndvanceMan
 }) => {
-  const baseStyles = "w-5/6 py-9 rounded font-semibold transition flex items-center justify-center relative";
+  const baseStyles = "w-5/6 py-12 rounded font-semibold transition flex items-center justify-center relative";
   
   const variantStyles = {
     primary: "bg-primary-100 text-white hover:bg-blue-600",
     secondary: "bg-gray-500 text-white hover:bg-gray-600",
-    outline: "border border-primary-100 text-blue-500 hover:bg-blue-500 hover:text-white",
+    outline: "border border-2 border-primary-100 text-blue-500 hover:bg-blue-500 hover:text-white",
   };
 
   const sizeStyles = {
@@ -30,7 +30,7 @@ const Experience: React.FC<ExperienceProps> = ({
       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]}`}
       style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
-      <div className="text-white z-10">{label}</div>
+      <div className="text-yellow-300 tracking-widest uppercase text-pretty text-2xl z-10">{label}</div>
     </button>
   );
 };
