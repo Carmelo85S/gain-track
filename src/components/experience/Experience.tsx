@@ -10,7 +10,7 @@ const Experience: React.FC<ExperienceProps> = ({
   size = "medium",
   img = BeginnerMan || IntermediateMan || AndvanceMan
 }) => {
-  const baseStyles = "w-5/6 py-12 rounded font-semibold transition flex items-center justify-center relative";
+const baseStyles = "w-5/6 min-h-[150px] py-12 rounded font-semibold transition flex items-center justify-center relative";
   
   const variantStyles = {
     primary: "bg-primary-100 text-white hover:bg-blue-600",
@@ -26,12 +26,19 @@ const Experience: React.FC<ExperienceProps> = ({
 
   return (
     <button 
-      onClick={onClick}
-      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]}`}
-      style={{ backgroundImage: `url(${img})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-    >
-      <div className="text-yellow-300 tracking-widest uppercase text-pretty text-2xl z-10">{label}</div>
-    </button>
+  onClick={onClick}
+  className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]}`}
+  style={{ 
+    backgroundImage: `url(${img})`, 
+    backgroundSize: 'cover', 
+    backgroundPosition: 'center', 
+    position: 'relative'
+  }}
+>
+  <div className="absolute inset-0 bg-black opacity-50"></div>
+  <div className="text-yellow-300 tracking-widest uppercase text-pretty text-2xl z-10">{label}</div>
+</button>
+
   );
 };
 
