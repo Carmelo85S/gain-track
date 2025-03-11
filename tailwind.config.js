@@ -4,25 +4,17 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
+        sans: ["Montserrat", "sans-serif"],
+        display: ["Bebas Neue", "sans-serif"],
       },
-      backgroundImage: {
-        'main-bg': "url('/src/assets/main.webp')",
-        'form-bg': "url('/src/assets/form.webp')", 
-        'profile-bg': "url('/src/assets/profile-form.webp')",
-        'man-workout' : "url('/src/assets/man-workout-main.webp')",
-        'woman-workout' : "url('/src/assets/woman-workout-main.webp')",
-      },
+      
       colors: {
-        "main": "#C6C6C6",
-        "black": "#000",
-        "primary-100": "#f1fF00",   // Arancione acceso per elementi principali (bottoni, call-to-action)
-        "primary-200": "#FFA559",   // Arancione più tenue per hover ed effetti soft
-        "secondary-300": "#005F73", // Blu petrolio per un contrasto moderno ed elegante
-        "secondary-400": "#0A9396", // Blu acqua per elementi secondari con freschezza
-        "training-100": "#001219",  // Blu notte molto scuro per profondità e forza
-        "training-text": "#EAEAEA", // Bianco sporco per leggibilità su sfondi scuri
-        "accent-100": "#94D2BD",    // Verde menta leggero per piccoli dettagli e armonia
+        "main": "#F3F4F6",  // **Bianco tenue** per lo sfondo, pulito e minimal
+        "black": "#000000", // **Nero** per il testo e i bottoni
+        "primary-100": "#B0B0B0",  // **Grigio scuro** per hover o bordi morbidi
+        "secondary-300": "#333333", // **Nero scuro** per sezioni secondarie
+        "accent-100": "#A1D6A5",    // **Verde tenue** per piccoli dettagli motivazionali
+        "hero-box": "#E0E0E0", // **Grigio chiaro** per l'hero box, più soft e meno aggressivo
       }
     },
     screens: {
